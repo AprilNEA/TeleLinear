@@ -17,7 +17,7 @@ export const handler: Handlers = {
     }
     const payload = JSON.parse(jsonView);
     // const { action, data, type, createdAt } = payload;
-    await sendMarkdown(payload);
+    await sendMarkdown(JSON.stringify(payload, undefined, 4));
     // const event: "Issue" | "Comment" = req.headers.get("Linear-Event");
     // switch (event) {
     //   case "Issue":
